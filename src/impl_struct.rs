@@ -25,4 +25,4 @@ println!("The area of rect is {} sqcm" , rect.area());
 println!("The perimeter of rect is {} cm" , rect.perimeter());
 
 
-}
+} // Implemented Struct 
