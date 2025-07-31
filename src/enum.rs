@@ -1,3 +1,5 @@
+
+//pattern matched enum 
 enum Shape {
     Circle(f64), 
     Sqaure(f64),
@@ -22,5 +24,5 @@ fn calculate_area(shape: Shape) -> f64 {
         Shape::Circle(radius) => 3.14 * radius * radius,
         Shape::Sqaure(side) => side *side,
         Shape:: Rectangle(width , height) => width * height,
-    }                        // no ; , implicit return 
+    }                        // no ; , implicit return  
 }
