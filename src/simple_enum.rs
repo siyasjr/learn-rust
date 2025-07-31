@@ -1,3 +1,5 @@
+// This is a light , straighforward enum . Debug trait for displaying in Debug mode 
+
 #[derive(Debug)]
 enum Direction {
     North, 
