@@ -1,16 +1,16 @@
-struct Rect{
+#[derive(Debug)]
+struct Rect {
+    width: u32,
     height: u32,
-    width: u32 
 }
 
 impl Rect {
-    fn area(&self) -> u32 {
+    fn calc_area(&self)-> u32{
         self.height * self.width
-
     }
 
-    fn perimeter(&self) -> u32{
-        2 * (self.height + self.width)
+    fn calc_perimeter(&self)-> u32{
+        2 * (self.width + self.height)
     }
 
 }
@@ -18,11 +18,10 @@ impl Rect {
 fn main(){
     let rect: Rect = Rect {
         height: 10,
-        width: 20
+        width: 20,
+
     };
-
-println!("The area of rect is {} sqcm" , rect.area());
-println!("The perimeter of rect is {} cm" , rect.perimeter());
-
-
-} // Implemented Struct 
+    println!("The area of the the {:?} is {} sqcm" ,rect, rect.calc_area());
+    println!("The perimeter of the {:?} is {} cm" ,rect, rect.calc_perimeter());
+   
+}
