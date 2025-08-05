@@ -1,0 +1,15 @@
+fn main() {
+
+    let mut vec = vec![1,2,3];
+    vec.push(4);
+    vec.push(5);
+
+
+    for val in &vec{
+    println!("{}", val)
+}
+    println!("{:?}", vec);
+
+}
+
+//Simple vector
