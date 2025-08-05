@@ -1,9 +1,5 @@
-/*fn main(){
-    println!("This is the entry point file")
-}*/
 
-
-use std::collections::HashMap;
+// This program creates a HashMap from a vector of (String, i32) pairs and prints the full map and each key-value pair.
 
 fn main(){
     let vec = vec![(String::from("Fayyaz"), 27), (String::from("Akmal"), 28), (String::from("Salam"), 29)];
