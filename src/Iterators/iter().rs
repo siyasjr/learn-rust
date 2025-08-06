@@ -1,3 +1,4 @@
+// This creates a vector of integers and iterates over it using an immutable reference, printing each element. After the loop, it prints the full vector.
 
 fn main(){
 
