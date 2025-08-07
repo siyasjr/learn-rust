@@ -1,0 +1,21 @@
+/*This Rust program demonstrates multithreading with std::thread and shows interleaving output between the main thread and a spawned thread. */
+
+use std::thread;
+use std::time::Duration;
+
+fn main() {
+    let handle = thread::spawn(|| {
+        for i in 1..1000 {
+            println!("hi number {} from the spawned thread!", i);
+            thread::sleep(Duration::from_millis(50)); // Slow it down to clearly see interleaving
+        }
+    });
+
+    for i in 1..5000 {
+        println!("hi number {} from the main thread!", i);
+        thread::sleep(Duration::from_millis(50));
+    }
+
+    // Now we wait for the spawned thread to finish
+    handle.join().unwrap();
+}
