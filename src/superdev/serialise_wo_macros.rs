@@ -10,3 +10,11 @@ pub trait  Serial {
     
 }
 
+pub trait  Deserial:Sized {
+    fn deserialise(v: &[u8]) -> Result<Self,Error>;
+    
+    
+}
+
+
+
