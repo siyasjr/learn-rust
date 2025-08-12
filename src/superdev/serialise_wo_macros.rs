@@ -4,3 +4,9 @@ struct Swap {
     second: i32
 }
 
+pub trait  Serial {
+    fn serialise(&self) -> Vec<u8>;
+
+    
+}
+
