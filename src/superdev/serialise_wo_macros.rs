@@ -51,3 +51,16 @@ impl Deserial for Swap {
 
     }
 }
+
+fn main(){
+
+    let s = Swap{
+        first: 1025,
+        second: 256
+    };
+    let ser = s.serialise();
+    let des = Swap::deserialise(&ser).unwrap();
+
+    println!("{:?}", ser);
+    println!("{}, {}", des.first, des.second);
+}
