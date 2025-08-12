@@ -1,3 +1,4 @@
+use::std::fmt::Error;
 
 struct Swap {
     first : i32,
@@ -16,5 +17,14 @@ pub trait  Deserial:Sized {
     
 }
 
+impl Serial for aSwap {
+    fn serialise(&self) -> Vec<u8>{
+     let mut result = Vec::new();
+     result.extend_from_slice(&self.first.to_be_bytes());
+     result.extend_from_slice(&self.second.to_be_bytes());
+     result
+    }
 
+    
+}
 
