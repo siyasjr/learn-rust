@@ -28,3 +28,26 @@ impl Serial for aSwap {
     
 }
 
+impl Deserial for Swap {
+    fn deserialise(v: &[u8]) -> Result<Self,Error>{
+        if v.len() < 8 {
+            return Err(Error);
+        }
+
+        let first_bytes:[u8 ;4] = v[0..4]
+                                    .try_into()
+                                    .map_err(|_| Error)?;
+
+        let second_bytes:[u8 ; 4] = v[4..8]
+                                        .try_into()
+                                        .map_err(|_| Error)?;
+
+        let first = i32::from_be_bytes(first_bytes);
+        let second = i32::from_be_bytes(second_bytes);        
+        Ok(Swap { first, second })
+
+        
+
+
+    }
+}
