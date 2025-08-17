@@ -1,4 +1,4 @@
-// timer.rs
+
 use std::{env, thread, time};
 
 fn main() {
