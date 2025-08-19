@@ -8,6 +8,8 @@ struct Book {
     pages: u32,
 }
 
+
+
 fn main() {
     // A list of books
     let library = vec![
